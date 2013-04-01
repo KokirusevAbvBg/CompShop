@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Login</title>
+        <link rel="stylesheet" href="CompShop.css" type="text/css"/>
+    </h:head>
+    <h:body>
+        
+        <div class="navbar">    
+            <ul class="navbar">
+                <li><h:link value="Home page" outcome="index" /></li>
+                <li><h:link value="Register page" outcome="register" /></li>
+                <li><h:link value="Login" outcome="login" /></li>
+                <li><h:link value="Add Product" outcome="addProduct" /></li>
+                <li><h:link value="View Products" outcome="viewProduct" /></li>
+            </ul>  
+
+
+        </div>
+        <h1>Login page</h1>
+        <h:form class="regform" >
+            <fieldset>
+
+                <h:messages errorClass="errorMessage" infoClass="infoMessage"
+                            warnClass="warnMessage"></h:messages>
+                <h:panelGrid columns="2">
+
+                    <h:outputText value="Username :"></h:outputText>
+                    <h:inputText id="username" value="#{loginBean.username}"
+                                 required="true" requiredMessage="Please Enter Password!"></h:inputText>
+
+                    <h:outputText value="Password :"></h:outputText>
+                    <h:inputText id="password" value="#{loginBean.password}"
+                                 required="true" requiredMessage="Please Enter Password!"></h:inputText>
+
+                    <h:commandButton type="submit" value="Submit"
+                                     action="#{loginBean.CheckValidUser}"></h:commandButton>
+                </h:panelGrid>
+            </fieldset>            
+        </h:form>
+    </h:body>
+</html>
+

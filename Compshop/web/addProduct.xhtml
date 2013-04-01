@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Add Product</title>
+        <link rel="stylesheet" href="CompShop.css" type="text/css"/>
+    </h:head>
+    <h:body>
+        
+        <div class="navbar">    
+            <ul class="navbar">
+                <li><h:link value="Home page" outcome="index" /></li>
+                <li><h:link value="Register page" outcome="register" rendered="#{loginBean.username == null}" /></li>
+                <li><h:link value="Login" outcome="login" rendered="#{loginBean.username == null}"/></li>
+                <li><h:link value="Add Product" outcome="addProduct" /></li>
+                <li><h:link value="View Products" outcome="viewProduct" /></li>
+            </ul>  
+
+
+        </div>
+        <h1>Add product</h1>
+        <h:form class="regform" >
+            <fieldset>
+                <h:messages errorClass="errorMessage" infoClass="infoMessage"
+                            warnClass="warnMessage"></h:messages>
+                <h:panelGrid columns="2">
+                    <h:outputText value="Product Name :"></h:outputText>
+                    <h:inputText id="name" value="#{addBean.name}"
+                                 required="true" requiredMessage="Please Enter Name!"></h:inputText>
+
+                    <h:outputText value="Processor :"></h:outputText>
+                    <h:inputText id="processor" value="#{addBean.processor}"
+                                 required="true" requiredMessage="Please Enter Processor!"></h:inputText>
+
+                    <h:outputText value="Graphics Card :"></h:outputText>
+                    <h:inputText id="graphicsCard" value="#{addBean.graphicsCard}"
+                                 required="true" requiredMessage="Please Graphics Card!"></h:inputText>
+
+                    <h:outputText value="Hard Disk :"></h:outputText>
+                    <h:inputText id="hardDisk" value="#{addBean.hardDisk}"
+                                 required="true" requiredMessage="Please Enter Hard Disk!"></h:inputText>
+
+                    <h:commandButton type="submit" value="Submit"
+                                     action="#{addBean.addProduct}"></h:commandButton>
+                </h:panelGrid>
+            </fieldset>
+        </h:form>
+    </h:body>
+</html>
+

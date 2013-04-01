@@ -1,0 +1,91 @@
+/* 
+    Document   : CompShop
+    Created on : Feb 10, 2013, 10:00:20 PM
+    Author     : NikIvRu
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+html{
+    background-color: #e8e8e8;
+}
+
+body{
+    
+}
+
+h1{
+    text-align: center;
+    font-size: 300%;
+    font-family: Times New Roman;
+    font-style: italic;
+}
+
+.errorMessage{
+    color:red;
+}
+ 
+.infoMessage{
+    color:blue;
+}
+ 
+.warnMessage{
+    color:orange;
+}
+
+form.regform fieldset{
+    width: 400px ;      
+    margin:auto;
+    margin-top: 50px; 
+    border:4px groove #D1D0D7;
+    background-color: #D1D0D7;         
+}
+
+.navbar{
+    text-align:center;
+    height: 30px;   
+    margin-bottom: 2%;
+}
+
+.navbar ul{
+    background: #D1D0D7;
+    width:50%; 
+    margin: auto;
+    border:8px groove #005F6B;   
+    margin-bottom: 2%;   
+}
+
+.navbar ul li{         
+    position: relative;
+    top:5px;
+    margin-right: 5%;
+    font-size: 120%;
+    display: inline; 
+}
+
+.navbar a{
+    font-size: 110%;
+    font-family:serif; 
+    color: #404749;
+}
+
+.userlist{        
+    margin: auto;
+    padding:5px;  
+    border:2px solid #101010;
+    border-collapse: collapse; 
+    width:700px; 
+} 
+
+.userlist th,td{                       
+    text-align:left;  
+    padding: 7px 17px; 
+    border-bottom:2px solid #101010 ; 
+}  
+
+
+ 

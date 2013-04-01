@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>View Products</title>
+        <link rel="stylesheet" href="CompShop.css" type="text/css"/>
+    </h:head>
+    <h:body>
+
+        <div class="navbar">    
+            <ul class="navbar">
+                <li><h:link value="Home page" outcome="index" /></li>
+                <li><h:link value="Register page" outcome="register" rendered="#{loginBean.username == null}" /></li>
+                <li><h:link value="Login" outcome="login" rendered="#{loginBean.username == null}"/></li>
+                <li><h:link value="Add Product" outcome="addProduct" /></li>
+                <li><h:link value="View Products" outcome="viewProduct" /></li>
+            </ul>  
+
+
+        </div>
+
+        <h1>View Products</h1>
+        <h:form class="regform" >
+            <center>
+                <h:dataTable value="#{viewBean.getProducts()}" var="p" class="userlist">
+
+
+                    <h:column>
+                        <f:facet name="header">
+                            Name
+                        </f:facet>
+                        #{p.name}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">
+                            Processor
+                        </f:facet>
+                        #{p.processor}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">
+                            Graphics Card
+                        </f:facet>
+                        #{p.graphicsCard}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">
+                            Hard Disk
+                        </f:facet>
+                        #{p.hardDisk}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">
+                            Buy
+                        </f:facet>
+                        <h:commandButton type="submit" value="Buy"
+                                         ></h:commandButton>
+                    </h:column>
+
+                </h:dataTable>
+            </center>
+        </h:form>
+        
+        <h:outputText value="Name :"></h:outputText>
+        <h:outputText value="#{loginBean.username}"></h:outputText>
+   
+    </h:body>
+</html>
+

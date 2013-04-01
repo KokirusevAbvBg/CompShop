@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Product Confirmed</title>
+        <link rel="stylesheet" href="CompShop.css" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h:form class="regform" >
+            <fieldset>
+                <h:outputText value="Registration Confirmation" styleClass="header"></h:outputText>
+                <h:messages errorClass="errorMessage" infoClass="infoMessage"
+                            warnClass="warnMessage"></h:messages>
+                <h:panelGrid columns="2">
+                    <h:outputText value="Name :"></h:outputText>
+                    <h:outputText value="#{addBean.name}"></h:outputText>
+
+                    <h:outputText value="Processor :"></h:outputText>
+                    <h:outputText value="#{addBean.processor}"></h:outputText>
+
+                    <h:outputText value="Graphics Card :"></h:outputText>
+                    <h:outputText value="#{addBean.graphicsCard }"></h:outputText>
+
+                    <h:outputText value="Hard Disk:"></h:outputText>
+                    <h:outputText value="#{addBean.hardDisk}"></h:outputText>
+
+                </h:panelGrid>
+            </fieldset>
+        </h:form>
+    </h:body>
+</html>
+

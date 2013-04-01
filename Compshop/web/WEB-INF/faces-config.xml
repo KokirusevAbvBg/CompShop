@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.1"
+              xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+    <managed-bean>
+        <description>This is the registration bean</description>
+        <managed-bean-name>regBean</managed-bean-name>
+        <managed-bean-class>com.compshop.controller.RegistrationBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+
+    
+    <navigation-rule>
+        <display-name>/register.xhtml</display-name>
+        <from-view-id>/register.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/RegConfirmed.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <display-name>/register.xhtml</display-name>
+        <from-view-id>/register.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/register.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+     <managed-bean>
+        <description>This is the login bean</description>
+        <managed-bean-name>loginBean</managed-bean-name>
+        <managed-bean-class>com.compshop.controller.LoginBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <navigation-rule>
+        <display-name>/login.xhtml</display-name>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <display-name>/login.xhtml</display-name>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>  
+       
+    <managed-bean>
+        <description>This is the product add bean</description>
+        <managed-bean-name>addBean</managed-bean-name>
+        <managed-bean-class>com.compshop.controller.AddProductBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean> 
+    
+    <navigation-rule>
+        <display-name>/addProduct.xhtml</display-name>
+        <from-view-id>/addProduct.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/ProductConfirmed.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>   
+    
+
+    
+    <managed-bean>
+         <description>This is the view product bean</description>
+        <managed-bean-name>viewBean</managed-bean-name>
+        <managed-bean-class>com.compshop.controller.ViewProductBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+</faces-config>
